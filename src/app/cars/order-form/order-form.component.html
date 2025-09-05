@@ -1,0 +1,41 @@
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+  <h3 class="order-title">Забронируйте автомобиль</h3>
+  <p class="order-desc">
+    Заполните контактные данные, и мы перезвоним вам для обсуждения деталей
+    и подтверждения бронирования
+  </p>
+
+  <div class="order-form">
+    <input
+      type="text"
+      required
+      placeholder="Автомобиль"
+      id="car"
+      formControlName="car"
+      [class.error]="orderForm.get('car')?.invalid && orderForm.get('car')?.touched"
+      [readOnly]="false" />
+    <input
+      type="text"
+      required
+      placeholder="Ваше имя"
+      id="name"
+      formControlName="name"
+      [class.error]="orderForm.get('name')?.invalid && orderForm.get('name')?.touched" />
+    <input
+      type="text"
+      required
+      placeholder="Ваш телефон"
+      id="phone"
+      formControlName="phone"
+      [class.error]="orderForm.get('phone')?.invalid && orderForm.get('phone')?.touched" />
+    <div id="error-container"></div>
+    <button
+      class="button"
+      type="submit"
+      id="order-action"
+      [disabled]="!orderForm.valid"
+      (click)="onSubmit()">
+      Забронировать
+    </button>
+  </div>
+</form>

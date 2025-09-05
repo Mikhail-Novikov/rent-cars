@@ -1,0 +1,7 @@
+<ul>
+  @for (filter of carsFilter ; track filter.name) {
+    <li [class.active]="filter.active" (click)="onSelect(filter)">
+      {{ filter.name }}
+    </li>
+  }
+</ul>

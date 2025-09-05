@@ -1,0 +1,3 @@
+<div class="cars-list">
+  <app-car-card *ngFor="let car of cars" [car]="car" (book)="onBook($event)"></app-car-card>
+</div>

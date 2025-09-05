@@ -1,0 +1,16 @@
+<div class="car-card">
+  <img [src]="car.image" alt="car" class="car-image"/>
+  <div class="car-info">
+    <h4>{{ car.title }}</h4>
+    <p>{{ car.text }}</p>
+    <div class="car-prices">
+      @for (p of car.prices; track $index) {
+        {{ p }} $
+        @if ($index > 0) {
+          <span>/сут</span>
+        }
+      }
+    </div>
+    <button class="button" (click)="onBook()">Забронировать</button>
+  </div>
+</div>
