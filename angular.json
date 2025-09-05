@@ -14,7 +14,11 @@
               "extractLicenses": false,
               "namedChunks": true,
               "optimization": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "outputPath": {
+                "base": "docs",
+                "browser": ""
+              }
             },
             "production": {
               "aot": true,
@@ -29,7 +33,10 @@
             "assets": [{"glob": "**/*", "input": "public"}],
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "outputPath": "docs",
+            "outputPath": {
+              "base": "docs",
+              "browser": ""
+            },
             "polyfills": ["zone.js"],
             "scripts": [],
             "styles": ["src/global_styles.less"],
