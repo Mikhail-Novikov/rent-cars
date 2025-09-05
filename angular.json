@@ -34,7 +34,7 @@
             "scripts": [],
             "styles": ["src/global_styles.less"],
             "tsConfig": "tsconfig.app.json",
-            "baseHref": "/cars-rent/"
+            "baseHref": "/rent-cars/"
           }
         },
         "serve": {
