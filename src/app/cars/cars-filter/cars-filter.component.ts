@@ -3,7 +3,7 @@ import { FilterModel } from './cars-filter.model';
 @Component({
   selector: 'app-cars-filter',
   templateUrl: './cars-filter.component.html',
-  
+  styleUrls: ['./cars-filter.component.less']
 })
 
 /** Компонент фильтра автомобилей */

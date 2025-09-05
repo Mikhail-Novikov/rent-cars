@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { ReactiveFormsModule, FormGroup } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,8 @@ import { ReactiveFormsModule, FormGroup } from '@angular/forms';
   standalone: true,
   imports: [ ReactiveFormsModule ],
   templateUrl: './order-form.component.html',
-  styleUrls: ['./order-form.component.less']
+  styleUrls: ['./order-form.component.less'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class OrderFormComponent {
   @Input() orderForm!: FormGroup;

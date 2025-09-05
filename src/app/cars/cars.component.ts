@@ -1,5 +1,5 @@
 import { HttpClient } from "@angular/common/http";
-import { Component, inject } from "@angular/core";
+import { Component, inject, ViewEncapsulation } from "@angular/core";
 import { ReactiveFormsModule, FormControl, FormGroup } from "@angular/forms";
 import { CarsModule } from "./cars.module";
 import { carsFilter } from "@constants";
@@ -12,6 +12,7 @@ import { CarModel, FilterModel, ResponseOrderModel } from "./cars.model";
   imports: [ReactiveFormsModule, CarsModule],
   templateUrl: "./cars.component.html",
   styleUrls: ["./cars.component.less"],
+  encapsulation: ViewEncapsulation.None,
 })
 
 /** Класс компонента автомобилей */
@@ -35,7 +36,6 @@ export class CarsComponent {
    * @param filter Значение фильтра
   */
   getCars(filter: string) {
-    console.log(filter);
     this.http
       .get<CarModel[]>("https://testologia.ru/cars-data", {
         params: { filter: filter },

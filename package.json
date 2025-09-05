@@ -1,6 +1,17 @@
 {
-  "name": "angular-starter",
-  "private": true,
+  "name": "rent-cars-frontend",
+  "version": "1.0.0-beta.0",
+  "description": "Angular frontend for rent cars app",
+  "main": "src/main.ts",
+  "license": "MIT",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mikhail-Novikov/rent-cars"
+  },
+  "engines": {
+    "node": ">=21.0.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
